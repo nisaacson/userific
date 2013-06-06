@@ -1,7 +1,7 @@
 {
   "name": "userific",
   "version": "0.0.1",
-  "description": "User registration and authentication using MongoDB",
+  "description": "User registration and authentication server",
   "main": "index.js",
   "directories": {
     "test": "test"
@@ -20,5 +20,10 @@
   ],
   "author": "Noah Isaacson",
   "license": "BSD",
-  "readmeFilename": "README.md"
+  "readmeFilename": "README.md",
+  "devDependencies": {
+    "should": "~1.2.2",
+    "mocha": "~1.10.0",
+    "eyespect": "~0.1.8"
+  }
 }
