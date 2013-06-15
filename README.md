@@ -58,7 +58,7 @@ userific.authenticate(userData, function(err, userModel) {
 ```
 
 ## Change Email
-To change the email for a user follow the code below. Note that you must pass both `email` and `newEmail`
+To change the email for a user follow the code below. Note that you must pass both `currentEmail` and `newEmail`
 
 ```javascript
 var inspect = require('eyespect').inspector()
@@ -78,7 +78,7 @@ userific.changeEmail(userData, function(err, userModel) {
 ```
 
 ## Change Password
-To change the password for a user follow the code below. Note that you must pass both `password` and `newPassword`
+To change the password for a user follow the code below. Note that you must pass both `currentPassword` and `newPassword`
 
 ```javascript
 var inspect = require('eyespect').inspector()
