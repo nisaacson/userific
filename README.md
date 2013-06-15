@@ -84,15 +84,15 @@ To change the password for a user follow the code below. Note that you must pass
 var inspect = require('eyespect').inspector()
 var userific = require('userific')
 var userData = {
-  currentEmail: 'foo@example.com',
-  newEmail: 'bar@example.com'
+  currentPassword: 'barPassword',
+  newPassword: 'fooPassword'
 }
 
-userific.changeEmail(userData, function(err, userModel) {
+userific.changePassword(userData, function(err, userModel) {
   if (err)  {
     inspect(err, 'error registering user')
     return
   }
-  inspect(userModel, 'user email changed')
+  inspect(userModel, 'user password changed')
 })
 ```
