@@ -1,6 +1,6 @@
 {
   "name": "userific",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "User registration and authentication server",
   "main": "index.js",
   "directories": {
