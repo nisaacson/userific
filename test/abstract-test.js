@@ -42,4 +42,22 @@ describe('Abstract Userific Interface', function () {
       done()
     })
   })
+
+  it('should give error when calling abstract resetPassword function', function (done) {
+    var userific = new Userific()
+    userific.resetPassword(userData, function (err, user) {
+      should.exist(err)
+      err.error.should.eql('abstract resetPassword function not implemented')
+      done()
+    })
+  })
+
+  it('should give error when calling abstract confirmEmail function', function (done) {
+    var userific = new Userific()
+    userific.confirmEmail(userData, function (err, user) {
+      should.exist(err)
+      err.error.should.eql('abstract confirmEmail function not implemented')
+      done()
+    })
+  })
 })

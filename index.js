@@ -27,6 +27,20 @@ Userific.prototype = {
       error: 'abstract changePassword function not implemented',
       stack: new Error().stack
     })
+  },
+  resetPassword: function(data, cb) {
+    return cb({
+      message: 'Each userific backend must implement the prototype.resetPassword function themselves',
+      error: 'abstract resetPassword function not implemented',
+      stack: new Error().stack
+    })
+  },
+  confirmEmail: function(data, cb) {
+    return cb({
+      message: 'Each userific backend must implement the prototype.confirmEmail function themselves',
+      error: 'abstract confirmEmail function not implemented',
+      stack: new Error().stack
+    })
   }
 }
 
