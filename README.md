@@ -1,5 +1,10 @@
 # Userific
+
+[![Build Status](https://travis-ci.org/nisaacson/userific.png)](https://travis-ci.org/nisaacson/userific)
+[![Dependency Status](https://david-dm.org/nisaacson/userific.png)](https://david-dm.org/nisaacson/userific)
+
 User registration and authentication interface. Any userific backend should follow work with the examples below
+
 
 # Installation
 ```bash
