@@ -7,6 +7,13 @@ Userific.prototype = {
       stack: new Error().stack
     })
   },
+  confirmEmail: function(data, cb) {
+    return cb({
+      message: 'Each userific backend must implement the prototype.confirmEmail function themselves',
+      error: 'abstract confirmEmail function not implemented',
+      stack: new Error().stack
+    })
+  },
   authenticate: function(data, cb) {
     return cb({
       message: 'Each userific backend must implement the prototype.authenticate function themselves',
@@ -28,20 +35,21 @@ Userific.prototype = {
       stack: new Error().stack
     })
   },
+  generatePasswordResetToken: function(data, cb) {
+    return cb({
+      message: 'Each userific backend must implement the prototype.generatePasswordResetToken function themselves',
+      error: 'abstract generatePasswordResetToken function not implemented',
+      stack: new Error().stack
+    })
+  },
   resetPassword: function(data, cb) {
     return cb({
       message: 'Each userific backend must implement the prototype.resetPassword function themselves',
       error: 'abstract resetPassword function not implemented',
       stack: new Error().stack
     })
-  },
-  confirmEmail: function(data, cb) {
-    return cb({
-      message: 'Each userific backend must implement the prototype.confirmEmail function themselves',
-      error: 'abstract confirmEmail function not implemented',
-      stack: new Error().stack
-    })
   }
+
 }
 
 module.exports = Userific
