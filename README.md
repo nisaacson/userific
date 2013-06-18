@@ -19,7 +19,7 @@ Any module that implements the userific interface must implement the following a
 * `confirmEmail`
 * `authenticate`
 * `changeEmail`
-* `changePassword
+* `changePassword`
 * `generateResetPasswordToken`
 * `resetPassword`
 
