@@ -172,3 +172,73 @@ backend.resetPassword(userData, function(err, newRawPassword) {
 })
 ```
 
+## Fetch User By Email
+
+Sometimes the backend needs to be able to lookup a user in the data-store by their email address
+
+```javascript
+var inspect = require('eyespect').inspector()
+var backend = new require('userific-mockbackend')
+var email = 'foo@example.com'
+backend.fetchUserByEamil(email, function(err, user) {
+  if (err)  {
+    inspect(err, 'error looking up user by email')
+    return
+  }
+  inspect(user, 'user found by email')
+})
+```
+
+## Validate Access Token
+
+For sites in beta launch, the backend might need to restrict registrations to users that were invited by someone else and thus have a valid access token. The backend should implement a way to validate these access tokens
+
+```javascript
+var inspect = require('eyespect').inspector()
+var backend = new require('userific-mockbackend')
+var accessToken = 'f47ac10b-58cc-4372-a567-0e02b2c3d479'
+backend.validateAccessToken(accessToken, function(err) {
+  if (err)  {
+    inspect(err, 'access token validation failed')
+    return
+  }
+  inspect('access token is valid')
+})
+```
+
+## Validate Reset Token
+
+When a user requests a password reset, they get a password reset token. Before the password is reset however this reset token must be validated
+
+```javascript
+var inspect = require('eyespect').inspector()
+var backend = new require('userific-mockbackend')
+var resetToken = 'f47ac10b-58cc-4372-a567-0e02b2c3d479'
+backend.validateResetToken(accessToken, function(err) {
+  if (err)  {
+    inspect(err, 'password reset token is not valid')
+    return
+  }
+  inspect('password reset token is valid, go ahead a reset password now')
+})
+```
+
+## Grant Access Tokens for Email
+
+Sometimes you might want to restrict new registrations to only invited users. When a user registers with a valid access token, that user should then be allowed to invite others to join. Therefore the backend should implement a functio to grant a given number of access tokens to the newly registered user
+
+```javascript
+var inspect = require('eyespect').inspector()
+var backend = new require('userific-mockbackend')
+var numTokens = 5
+var email = 'foo@example.com'
+backend.grantAccessTokensForEmail(email, numTokens, function(err, reply) {
+  if (err)  {
+    inspect(err, 'failed to grant access tokens for email')
+    return
+  }
+  inspect(reply, 'granted access tokens for email correctly')
+})
+```
+
+
