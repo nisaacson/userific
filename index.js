@@ -49,35 +49,35 @@ Userific.prototype = {
       stack: new Error().stack
     })
   },
-  fetchUserByEmail: function(data, cb) {
+  fetchUserByEmail: function(email, cb) {
     return cb({
       message: 'Each userific backend must implement the prototype.fetchUserByEmail function themselves',
       error: 'abstract fetchUserByEmail function not implemented',
       stack: new Error().stack
     })
   },
-  validateAccessToken: function(data, cb) {
+  validateAccessToken: function(accessToken, cb) {
     return cb({
       message: 'Each userific backend must implement the prototype.validateAccessToken function themselves',
       error: 'abstract validateAccessToken function not implemented',
       stack: new Error().stack
     })
   },
-  validateConfirmToken: function(data, cb) {
+  validateConfirmToken: function(confirmToken, cb) {
     return cb({
       message: 'Each userific backend must implement the prototype.validateConfirmToken function themselves',
       error: 'abstract validateConfirmToken function not implemented',
       stack: new Error().stack
     })
   },
-  validateResetToken: function(data, cb) {
+  validateResetToken: function(resetToken, cb) {
     return cb({
       message: 'Each userific backend must implement the prototype.validateResetToken function themselves',
       error: 'abstract validateResetToken function not implemented',
       stack: new Error().stack
     })
   },
-  grantAccessTokensForEmail: function(data, cb) {
+  grantAccessTokensForEmail: function(email, numTokens, cb) {
     return cb({
       message: 'Each userific backend must implement the prototype.grantAccessTokensForEmail function themselves',
       error: 'abstract grantAccessTokensForEmail function not implemented',

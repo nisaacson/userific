@@ -93,7 +93,8 @@ describe('Abstract Userific Interface', function() {
 
   it('should give error when calling abstract validateConfirmToken function', function(done) {
     var userific = new Userific()
-    userific.validateConfirmToken(userData, function(err, user) {
+    var confirmToken = 'foo'
+    userific.validateConfirmToken(confirmToken, function(err, user) {
       should.exist(err)
       err.error.should.eql('abstract validateConfirmToken function not implemented')
       done()
@@ -103,7 +104,8 @@ describe('Abstract Userific Interface', function() {
 
   it('should give error when calling abstract validateResetToken function', function(done) {
     var userific = new Userific()
-    userific.validateResetToken(userData, function(err, user) {
+    var resetToken = 'foo'
+    userific.validateResetToken(resetToken, function(err, user) {
       should.exist(err)
       err.error.should.eql('abstract validateResetToken function not implemented')
       done()
@@ -111,7 +113,9 @@ describe('Abstract Userific Interface', function() {
   })
   it('should give error when calling abstract grantAccessTokensForEmail function', function(done) {
     var userific = new Userific()
-    userific.grantAccessTokensForEmail(userData, function(err, user) {
+    var email = 'foo@example.com'
+    var numTokens = 5
+    userific.grantAccessTokensForEmail(email, numTokens, function(err, user) {
       should.exist(err)
       err.error.should.eql('abstract grantAccessTokensForEmail function not implemented')
       done()
