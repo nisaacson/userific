@@ -71,4 +71,50 @@ describe('Abstract Userific Interface', function() {
   })
 
 
+  it('should give error when calling abstract fetchUserByEmail function', function(done) {
+    var userific = new Userific()
+    userific.fetchUserByEmail(userData, function(err, user) {
+      should.exist(err)
+      err.error.should.eql('abstract fetchUserByEmail function not implemented')
+      done()
+    })
+  })
+
+
+  it('should give error when calling abstract validateAccessToken function', function(done) {
+    var userific = new Userific()
+    userific.validateAccessToken(userData, function(err, user) {
+      should.exist(err)
+      err.error.should.eql('abstract validateAccessToken function not implemented')
+      done()
+    })
+  })
+
+
+  it('should give error when calling abstract validateConfirmToken function', function(done) {
+    var userific = new Userific()
+    userific.validateConfirmToken(userData, function(err, user) {
+      should.exist(err)
+      err.error.should.eql('abstract validateConfirmToken function not implemented')
+      done()
+    })
+  })
+
+
+  it('should give error when calling abstract validateResetToken function', function(done) {
+    var userific = new Userific()
+    userific.validateResetToken(userData, function(err, user) {
+      should.exist(err)
+      err.error.should.eql('abstract validateResetToken function not implemented')
+      done()
+    })
+  })
+  it('should give error when calling abstract grantAccessTokensForEmail function', function(done) {
+    var userific = new Userific()
+    userific.grantAccessTokensForEmail(userData, function(err, user) {
+      should.exist(err)
+      err.error.should.eql('abstract grantAccessTokensForEmail function not implemented')
+      done()
+    })
+  })
 })

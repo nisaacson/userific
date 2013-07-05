@@ -48,8 +48,41 @@ Userific.prototype = {
       error: 'abstract resetPassword function not implemented',
       stack: new Error().stack
     })
+  },
+  fetchUserByEmail: function(data, cb) {
+    return cb({
+      message: 'Each userific backend must implement the prototype.fetchUserByEmail function themselves',
+      error: 'abstract fetchUserByEmail function not implemented',
+      stack: new Error().stack
+    })
+  },
+  validateAccessToken: function(data, cb) {
+    return cb({
+      message: 'Each userific backend must implement the prototype.validateAccessToken function themselves',
+      error: 'abstract validateAccessToken function not implemented',
+      stack: new Error().stack
+    })
+  },
+  validateConfirmToken: function(data, cb) {
+    return cb({
+      message: 'Each userific backend must implement the prototype.validateConfirmToken function themselves',
+      error: 'abstract validateConfirmToken function not implemented',
+      stack: new Error().stack
+    })
+  },
+  validateResetToken: function(data, cb) {
+    return cb({
+      message: 'Each userific backend must implement the prototype.validateResetToken function themselves',
+      error: 'abstract validateResetToken function not implemented',
+      stack: new Error().stack
+    })
+  },
+  grantAccessTokensForEmail: function(data, cb) {
+    return cb({
+      message: 'Each userific backend must implement the prototype.grantAccessTokensForEmail function themselves',
+      error: 'abstract grantAccessTokensForEmail function not implemented',
+      stack: new Error().stack
+    })
   }
-
 }
-
 module.exports = Userific

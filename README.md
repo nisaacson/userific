@@ -22,6 +22,11 @@ Any module that implements the userific interface must implement the following a
 * `changePassword`
 * `generateResetPasswordToken`
 * `resetPassword`
+* `fetchUserByEmail`
+* `validateAccessToken`
+* `validateConfirmToken`
+* `validateResetToken`
+* `grantAccessTokensForEmail`
 
 
 ## Register
